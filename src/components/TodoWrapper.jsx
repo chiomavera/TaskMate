@@ -1,39 +1,55 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
+import { nanoid } from "nanoid";
 import TodoForm from "./TodoForm";
 import Todo from "./Todo";
-import { v4 as uuidv4 } from "uuid";
-uuidv4();
+import EditTodoForm from "./EditTodo";
+nanoid();
+
 
 const TodoWrapper = () => {
   const [todos, setTodos] = useState([]);
 
+
   const addTodo = (todo) => {
-    const newTodos = { 
-      id: uuidv4(), 
-      task: todo, 
-      completed: false, 
-      isEditing: false }
+    const newTodos = {
+      id: `todo-${nanoid()}`,
+      task: todo,
+      completed: false,
+      isEditing: false,
+    };
 
     setTodos([...todos, newTodos]);
-    console.log(todo);
   };
 
-  const handleTodoCheck = (id) => {
-    setTodos(todos.map((todo) =>
-        todo.id === id ? { ...todo, completed: !todo.completed} : todo
+  
+  
+  const toggleCompleteTask = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
       )
     );
   };
 
-  const handleDeleteTodo = (id) => {
-    setTodos(todos.filter(todo => todo.id !== id))
-  }
+  const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
 
-  const handleEditTodo = (id) => {
-    setTodos(todos.map(todo => 
-      todo.id === id ? {...todo, isEditing: !todo.isEditing} : todo
-    ))
-  }
+  const editTodo = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
+      )
+    );
+  };
+
+  const editTask = (task, id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo
+      )
+    );
+  };
 
   return (
     <div className="todo__wrapper">
@@ -41,14 +57,19 @@ const TodoWrapper = () => {
       <TodoForm addTodo={addTodo} />
 
       {/* display todos */}
-      {todos.map(todo => (
-        <Todo 
-        task={todo} 
-        key={todo.id} 
-        onCheck={handleTodoCheck} 
-        deleteTodo={handleDeleteTodo}
-        editTodo={handleEditTodo} />
-      ))}
+      {todos.map((todo, id) =>
+        todo.isEditing ? (
+          <EditTodoForm editTodo={editTask} task={todo} />
+        ) : (
+          <Todo
+            task={todo}
+            key={id}
+            onCheck={toggleCompleteTask}
+            deleteTodo={deleteTodo}
+            editTodo={editTodo}
+          />
+        )
+      )}
     </div>
   );
 };
