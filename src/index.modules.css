@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+  --navy: #1A1A40;
+  --blue: #7A0BC0;
+  --pink: #FA58B6;
+}
 
 * {
   font-family: 'Poppins', sans-serif;
@@ -8,7 +13,7 @@
 }
 
 body {
-  background: #8758ff;
+  background: var(--navy);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +30,7 @@ h1 {
 }
 
 .todo__wrapper {
-  background: #1A1A40;
+  background: var(--navy);
   margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
@@ -33,17 +38,22 @@ h1 {
 
 .todo__form {
   width: 100%;
-}
+} 
 
 .todo__input {
   outline: none;
   background: none;
-  border: 1px solid #8758ff;
+  border: 1px solid var(--pink);
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  width: 300px;
+  width: 320px;
   color: #fff;
+} 
+
+.todo__input:focus{
+  /* border: 1px solid var(--blue); */
+  border: 1px solid violet;
 }
 
 .todo__input::placeholder {
@@ -51,19 +61,27 @@ h1 {
 }
 
 .todo__btn {
-  background: #8758ff;
+  background: var(--pink);
   color: #fff;
   border: none;
   padding: 0.55rem;
   cursor: pointer;
-  
+}
+
+.todo__btn:hover{
+  background: violet;
+}
+
+.todo__btn:focus {
+  outline: none;
+  background: violet;
 }
 
 .Todo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #8758ff;
+  border: 2px solid var(--blue);
   color: #fff;
   padding: 0.75rem 1rem;
   border-radius: 5px;
@@ -71,12 +89,41 @@ h1 {
   cursor: pointer;
 }
 
-.fa__trash {
+.fa__edit {
   margin-left: 0.75rem;
+  color: #fff;
+  background-color: var(--navy);
+  border: none;
 }
 
-.todo__item{
-  display: flex;
+.fa__trash {
+  margin-left: 0.75rem;
+  color: red;
+  background-color: var(--navy);
+  border: none;
+}
+
+.fa__edit,
+.fa__trash{
+  font-size: 1.5rem;
+}
+
+.fa__edit:focus{
+  border: 2px solid #fff;
+  outline: none;
+}
+
+.fa__edit:hover{
+  color: #cbcaca;
+}
+
+.fa__trash:focus{
+  border: 2px solid red;
+  outline: none;
+}
+
+.fa__trash:hover{
+  color: rgb(171, 10, 10);
 }
 
 .check__box{
@@ -84,7 +131,19 @@ h1 {
 }
 
 .error__message{
-  color: #eee;
+  color: red;
   font-size: small;
 
+}
+
+.fa__plus{
+  font-size: 1.1rem;
+}
+
+@media (max-width: 450px) {
+  .todo__input {
+    
+    width: 260px;
+    
+  } 
 }
