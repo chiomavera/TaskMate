@@ -1,4 +1,5 @@
-import React, { useState} from "react";
+import React from "react";
+import useLocalStorage from "../hooks/Uselocalstorage";
 import { nanoid } from "nanoid";
 import TodoForm from "./TodoForm";
 import Todo from "./Todo";
@@ -7,7 +8,7 @@ nanoid();
 
 
 const TodoWrapper = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useLocalStorage('react.todo.task', []);
 
 
   const addTodo = (todo) => {
