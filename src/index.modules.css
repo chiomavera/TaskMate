@@ -23,6 +23,10 @@ body {
   text-align: center;
 }
 
+a{
+  text-decoration: none;
+}
+
 h1 {
   color: #fff;
   margin-bottom: 0.5rem;
@@ -138,6 +142,19 @@ h1 {
 
 .fa__plus{
   font-size: 1.1rem;
+}
+
+.footer{
+  margin-top: 15rem;
+}
+
+.footer-text,
+.github{
+  color: #ffffff90;
+}
+
+.socials{
+  margin-left: 0.75rem;
 }
 
 @media (max-width: 450px) {
