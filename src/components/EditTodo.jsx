@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
-
-
-const EditTodoForm = ({editTodo, task}) => {
+const EditTodoForm = ({ editTodo, task }) => {
   const [value, setValue] = useState(task.task);
 
   const handleSubmit = (e) => {
@@ -12,12 +10,12 @@ const EditTodoForm = ({editTodo, task}) => {
     editTodo(value, task.id);
   };
 
-  const handleChange = (e) => setValue(e.target.value)
+  const handleChange = (e) => setValue(e.target.value);
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <input
-          type="text" 
+          type="text"
           className="todo__input"
           placeholder="Update Task"
           aria-label="input-field"
