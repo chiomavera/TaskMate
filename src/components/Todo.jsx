@@ -18,6 +18,7 @@ const Todo = ({ task, onCheck, deleteTodo, editTodo }) => {
               checked={task.completed}
               onChange={() => onCheck(task.id)}
               autoFocus
+              aria-label="checkbox"
             />
             <span className="check__mark"></span>
           </label>
