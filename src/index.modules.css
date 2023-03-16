@@ -148,6 +148,10 @@ h1 {
   color: #ffffff90;
 }
 
+.github:hover{
+  color: var(--blue);
+}
+
 .socials {
   margin-left: 0.75rem;
 }
@@ -207,6 +211,10 @@ h1 {
 }
 
 .socials{
+  color: var(--pink);
+}
+
+.socials:hover{
   color: var(--blue);
 }
 
