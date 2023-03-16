@@ -6,10 +6,8 @@ import Todo from "./Todo";
 import EditTodoForm from "./EditTodo";
 nanoid();
 
-
 const TodoWrapper = () => {
-  const [todos, setTodos] = useLocalStorage('react.todo.task', []);
-
+  const [todos, setTodos] = useLocalStorage("react.todo.task", []);
 
   const addTodo = (todo) => {
     const newTodos = {
@@ -22,8 +20,6 @@ const TodoWrapper = () => {
     setTodos([...todos, newTodos]);
   };
 
-  
-  
   const toggleCompleteTask = (id) => {
     setTodos(
       todos.map((todo) =>
