@@ -15,3 +15,7 @@ The app also provides the ability to mark tasks as complete. To mark a task as c
 - Track progress: A todo app allows you to track your progress and mark tasks as completed when they are finished.
 
 Overall, the function of the App is to help you stay organized, manage your time effectively, and increase your productivity by keeping track of all your tasks in one place.
+
+## Screenshots
+![mobile screenshot of App](Screenshot (126).png)
+![desktop screenshot of App](Screenshot (125).png)

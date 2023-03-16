@@ -206,6 +206,10 @@ h1 {
   margin-left: 2rem;
 }
 
+.socials{
+  color: var(--blue);
+}
+
 @media (max-width: 450px) {
   .todo__input {
     width: 260px;
