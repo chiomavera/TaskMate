@@ -12,13 +12,16 @@ const Todo = ({ task, onCheck, deleteTodo, editTodo }) => {
             textDecorationColor: task.completed ? "#eee" : "inherit",
           }}
         >
-          <input
-            type="checkbox"
-            checked={task.completed}
-            onChange={() => onCheck(task.id)}
-            className="check__box"
-          />
-          {task.task}
+          <label className="custom__checkbox">
+            <input
+              type="checkbox"
+              checked={task.completed}
+              onChange={() => onCheck(task.id)}
+              autoFocus
+            />
+            <span className="check__mark"></span>
+          </label>
+          <span className="task">{task.task}</span>
         </div>
         <div>
           <button
