@@ -17,5 +17,6 @@ The app also provides the ability to mark tasks as complete. To mark a task as c
 Overall, the function of the App is to help you stay organized, manage your time effectively, and increase your productivity by keeping track of all your tasks in one place.
 
 ## Screenshots
-![mobile screenshot of App](Screenshot (126).png)
-![desktop screenshot of App](Screenshot (125).png)
+![mobile screenshot of App](https://github.com/chiomavera/Task-Manager/blob/main/Screenshot%20(126).png)
+
+![desktop screenshot of App](https://github.com/chiomavera/Task-Manager/blob/main/Screenshot%20(125).png)
