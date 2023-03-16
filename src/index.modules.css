@@ -148,7 +148,7 @@ h1 {
   color: #ffffff90;
 }
 
-.github:hover{
+.github:hover {
   color: var(--blue);
 }
 
@@ -182,7 +182,7 @@ h1 {
 }
 
 .custom__checkbox input:focus ~ .check__mark {
-  border: 2px solid var(--blue) ;
+  border: 2px solid var(--blue);
   outline: none;
 }
 
@@ -210,11 +210,11 @@ h1 {
   margin-left: 2rem;
 }
 
-.socials{
+.socials {
   color: var(--pink);
 }
 
-.socials:hover{
+.socials:hover {
   color: var(--blue);
 }
 
