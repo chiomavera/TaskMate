@@ -170,6 +170,7 @@ h1 {
 
 .custom__checkbox:hover input ~ .check__mark {
   background-color: #ccc;
+  border: 2px solid var(--blue);
 }
 
 .custom__checkbox input:checked ~ .check__mark {
@@ -177,7 +178,8 @@ h1 {
 }
 
 .custom__checkbox input:focus ~ .check__mark {
-  background-color: var(--blue);
+  border: 2px solid var(--blue) ;
+  outline: none;
 }
 
 .check__mark:after {
