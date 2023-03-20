@@ -1,19 +1,31 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faSave } from "@fortawesome/free-solid-svg-icons";
 
 const EditTodoForm = ({ editTodo, task }) => {
   const [value, setValue] = useState(task.task);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (value.trim() === "") {
+      const errorMessage = "Please fill in your task!"
+      return setErrorMessage(`${errorMessage}`)
+    }
     editTodo(value, task.id);
   };
 
-  const handleChange = (e) => setValue(e.target.value);
+  const handleChange = (e) => {
+    setValue(e.target.value);
+    if (e.target.value.trim() !== "") {
+      setErrorMessage("");
+  }
+}
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
+      {errorMessage && <p className="error__message">{errorMessage}</p>}
         <input
           type="text"
           className="todo__input"
@@ -25,7 +37,7 @@ const EditTodoForm = ({ editTodo, task }) => {
           maxLength="60"
         />
         <button type="submit" className="todo__btn" title="update task">
-          <FontAwesomeIcon icon={faCheck} />
+          <FontAwesomeIcon icon={faSave} />
         </button>
       </form>
     </div>
