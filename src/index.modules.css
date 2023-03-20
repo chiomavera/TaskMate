@@ -3,6 +3,7 @@
   --navy: #1a1a40;
   --blue: #7a0bc0;
   --pink: #fa58b6;
+  --red: red;
 }
 
 * {
@@ -56,7 +57,6 @@ h1 {
 }
 
 .todo__input:focus {
-  /* border: 1px solid var(--blue); */
   border: 1px solid violet;
 }
 
@@ -90,8 +90,10 @@ h1 {
   padding: 0.75rem 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
-  cursor: pointer;
+  cursor: pointer; 
 }
+
+
 
 .fa__edit {
   margin-left: 0.75rem;
@@ -102,7 +104,7 @@ h1 {
 
 .fa__trash {
   margin-left: 0.75rem;
-  color: red;
+  color: var(--red);
   background-color: var(--navy);
   border: none;
 }
@@ -122,7 +124,7 @@ h1 {
 }
 
 .fa__trash:focus {
-  border: 2px solid red;
+  border: 2px solid var(--red);
   outline: none;
 }
 
@@ -131,25 +133,18 @@ h1 {
 }
 
 .error__message {
-  color: red;
+  color: var(--red);
   font-size: small;
 }
 
-.fa__plus {
-  font-size: 1.1rem;
-}
+
 
 .footer {
   margin-top: 15rem;
 }
 
-.footer-text,
-.github {
+.footer-text{
   color: #ffffff90;
-}
-
-.github:hover {
-  color: var(--blue);
 }
 
 .socials {
@@ -216,6 +211,10 @@ h1 {
 
 .socials:hover {
   color: var(--blue);
+}
+
+.love{
+  color: var(--red);
 }
 
 @media (max-width: 450px) {

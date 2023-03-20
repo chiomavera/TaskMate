@@ -2,12 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <p className="footer-text">
-        made with ❤ by{" "}
-        <a className="github" href="https://github.com/chiomavera/">
-          Vera
-        </a>
+      <span>Copyright &copy; 2023.</span>
+       <span> made with <span className="love">❤</span> by Vera</span>
       </p>
       <div>
         <a className="socials" href="https://twitter.com/nkanmuo_vera">
@@ -19,8 +17,11 @@ const Footer = () => {
         >
           linkedIn
         </a>
+        <a className="socials" href="https://github.com/chiomavera/">
+          Github
+        </a>
       </div>
-    </div>
+    </footer>
   );
 };
 
