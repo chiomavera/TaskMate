@@ -1,4 +1,5 @@
 # Task Manager
+Task Manager is here to help you stay organized, manage your time effectively, and increase your productivity by keeping track of all your tasks in one place.
 
 ## Usage
 
