@@ -1,23 +1,63 @@
-# Task Manager
-Task Manager is here to help you stay organized, manage your time effectively, and increase your productivity by keeping track of all your tasks in one place.
+# ✅ TaskMate – React Task Management App
 
-## Usage
+**TaskMate** is a clean, responsive task manager built with **React.js**, designed to help users stay organized, boost productivity, and track task progress in real-time. Tasks are stored in **localStorage**, so your list persists even after closing the browser.
 
-To add a new task, enter the task on the input field and click on the plus button. Press the "Enter" key or click on the "Add" button to add the task to the list.
+👉 **Live Demo:** [https://taskmatebyvera-gnome-895670.netlify.app/](https://taskmatebyvera-gnome-895670.netlify.app/)
 
-To edit a task, click on the edit button and edit the text in the input field. Press the "Enter" key or click on the "Save" button to save the changes.
-To delete a task, click on the "Trash" button next to the task.
+---
 
-The app also provides the ability to mark tasks as complete. To mark a task as complete, simply click on the checkbox next to the task. The app will automatically update the task to show that it has been completed.
+## 🚀 Features
+- ✏️ Add, edit, and delete tasks  
+- ✅ Mark tasks as complete/incomplete  
+- 🔁 Data persistence using **localStorage**  
+- 📱 Mobile-friendly, responsive UI built with **React components**  
+- ⚛️ Smooth UI updates with React's state management  
 
-## Functionality
+---
 
-- Create tasks: this app allows you to create tasks.
-- Track progress: it also allows you to track your progress and mark tasks as completed when they are finished. You can also edit or delete tasks.
+## 🛠 Tech Stack
+- **React.js** – Component-based frontend development  
+- **JavaScript (ES6+)** – Logic and state handling  
+- **HTML5/CSS3** – Markup and styling  
+- **localStorage** – For persistent task data  
+- **Netlify** – CI/CD + hosting  
 
-Overall, the function of the App is to help you stay organized, manage your time effectively, and increase your productivity by keeping track of all your tasks in one place.
+---
 
-## Screenshots
-![mobile screenshot of App](https://github.com/chiomavera/Task-Manager/blob/main/Screenshot%20(126).png)
+## 📸 Screenshots
 
-![desktop screenshot of App](https://github.com/chiomavera/Task-Manager/blob/main/Screenshot%20(125).png)
+### 📱 Mobile View  
+![Mobile Screenshot](https://github.com/chiomavera/Task-Manager/blob/main/Screenshot%20(126).png)
+
+### 💻 Desktop View  
+![Desktop Screenshot](https://github.com/chiomavera/Task-Manager/blob/main/Screenshot%20(125).png)
+
+---
+
+## 👩🏽‍💻 What I Built & Learned
+
+This project helped me:
+- Deepen my understanding of **React hooks** (`useState`, `useEffect`)  
+- Practice **modular UI design** with reusable components  
+- Implement **stateful logic** and localStorage for real-world persistence  
+- Improve user experience through responsive layouts and interaction feedback  
+
+---
+
+## 🧠 Future Enhancements
+- Add task sorting and prioritization  
+- Introduce filters: All / Active / Completed  
+- Implement drag-and-drop task reordering with a library like `react-beautiful-dnd`  
+- Expand with backend storage for multi-device sync  
+
+---
+
+## 📎 Project Links
+- 🔗 **Live Site:** [taskmatebyvera.netlify.app](https://taskmatebyvera-gnome-895670.netlify.app/)  
+- 🧑🏽‍💻 **Code Repository:** [github.com/chiomavera/Task-Manager](https://github.com/chiomavera/Task-Manager)
+
+---
+
+## 🙌 Let's Connect
+Want to collaborate or give feedback?  
+📬 [LinkedIn](https://www.linkedin.com/in/chioma-vera-nkanmuo/)
